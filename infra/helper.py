@@ -1425,7 +1425,7 @@ def run_fuzzer(args):
     env += args.e
 
   run_args = _env_to_docker_args(env)
-
+  args.corpus_dir = "build/out/corpus"
   if args.corpus_dir:
     if not os.path.exists(args.corpus_dir):
       logger.error('The path provided in --corpus-dir argument does not exist')
